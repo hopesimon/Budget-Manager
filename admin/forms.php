@@ -19,8 +19,14 @@ if(isset($_POST['approve'])){
     $comment = sanitizeString($db, $_POST['comments']);
     $org_id = $_POST['org_id'];
     $update = "UPDATE `requests` SET `comments` = \"" . $comment . "\", `reviewer` = " . $reviewer . ", `appstatus` = \"Approved\" WHERE `id` = " . $org_id;
-    $check = $db->query($update);
-    if ($check){
+    $check1 = $db->query($update);
+    $u_tin = $_POST['this_tin'];
+    $u_expense = $_POST['this_expense'];
+    $o_name = $_POST['orgs_name'];
+    $net = $_POST['this_net'];
+    $update2 = "UPDATE `orgcurrent` SET `totalin` = " . $u_tin . ", `totalexpense` = " . $u_expense . ", `totalbudget` = " . $net . " WHERE `name` = \"" . $o_name . "\"";
+    $check2 = $db->query($update2);
+    if ($check1 && $check2){
         $success = "<div class='row' style='padding:30px;'><div class='alert alert-success' role='alert'>Form updated.</div></div></div>";
     }
     else {
@@ -400,6 +406,10 @@ elseif(isset($_POST['deny'])){
                         <textarea name=\"comments\" style=\"width: 80%; height: auto;\"></textarea>
                     </div>
                     <input type = \"number\" style = \"display:none;\" value = \"$id\" name = \"org_id\"></input>
+                    <input type = \"number\" style = \"display:none;\" step = \"0.01\" value = \"$tin\" name = \"this_tin\"></input>
+                    <input type = \"number\" style = \"display:none;\" step = \"0.01\" value = \"$expense\" name = \"this_expense\"></input>
+                    <input type = \"number\" style = \"display:none;\" step = \"0.01\" value = \"$net\" name = \"this_net\"></input>
+                    <input type = \"text\" style = \"display:none;\" value = \"$name\" name = \"orgs_name\"></input>
                 </div>
             </div>
             <div class=\"row\" style=\"padding-bottom: 20px;\">
