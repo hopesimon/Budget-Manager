@@ -119,7 +119,7 @@
     <script src="js/textcount.js"></script>
     <script src="js/totals.js"></script>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/fau.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <style>

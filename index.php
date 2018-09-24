@@ -30,12 +30,11 @@ session_start();
     <!-- Script -->
     <script src="jquery-3.2.1.min.js"></script>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/fau.css" rel="stylesheet">
     <script src="js/addAnotherRev.js"></script>
     <script src="js/revTotals.js"></script>
     <script src="js/textcount.js"></script>
-    <script src="js/autofill.js"></script>
     <!-- Custom styles for this template -->
     <style>
         .extrapadding{
