@@ -54,12 +54,11 @@
     <title>ASAB Office</title>
     <!-- Script -->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="js/addAnother.js"></script>
     <script src="js/textcount.js"></script>
     <script src="js/totals.js"></script>
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/fau.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <style>
@@ -123,35 +122,61 @@
                 <h1 class="mt-5">My apps</h1>
                     <div class="row" style="padding:10px;">
                         <div class="col-lg-12">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Transfers In</th>
-                                        <th>Transfers Out</th>
-                                        <th>Expenses</th>
-                                        <th>Net In/Out</th>
-                                        <th>App Status</th>
-                                        <th>Reviewer Comments</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
+                            <?php
+                                if(isset($status)){
+                                    echo "
+                                    <table class=\"table table-striped\">
+                                        <thead>
+                                            <tr>
+                                                <td><strong>Name</strong></td>
+                                                <td><strong>Transfers In</strong></td>
+                                                <td><strong>Transfers Out</strong></td>
+                                                <td><strong>Expenses</strong></td>
+                                                <td><strong>Net In/Out</strong></td>
+                                                <td><strong>App Status</strong></td>
+                                                <td><strong>Reviewer Comments</strong></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>";
                                         for($i = 0; $i < count($this_name); $i++){
                                             echo "
                                                 <tr>
-                                                    <td>$this_name[$i]</td>
+                                                    <td>$this_name[$i]</td>";
+                                            if(isset($tin[$i])){
+                                                echo "
                                                     <td>$$tin[$i]</td>
                                                     <td>$$tout[$i]</td>
                                                     <td>$$expense[$i]</td>
-                                                    <td>$$net[$i]</td>
-                                                    <td>$status[$i]</td>
-                                                    <td>$comments[$i]</td>
-                                            ";
+                                                    <td>$$net[$i]</td>";
+                                            }
+                                            else {
+                                                echo "
+                                                    <td>N/A</td>
+                                                    <td>N/A</td>
+                                                    <td>N/A</td>
+                                                    <td>N/A</td>";
+                                            }
+                                            if(isset($status[$i])){
+                                                echo "
+                                                    <td>$status[$i]</td>";
+                                            }
+                                            else {
+                                                echo "<td>No apps</td>";
+                                            }
+                                            if(isset($comments[$i])){
+                                                echo "
+                                                    <td>$comments[$i]</td>";
+                                            }
+                                            else {
+                                                echo "<td>No comments</td>";
+                                            }
+                                            echo "</tbody></table>";
                                         }
-                                    ?>
-                                </tbody>
-                            </table>
+                                }
+                                else {
+                                    echo "<h3> You have no pending apps.</h3>";
+                                }
+                            ?>
                         </div>
                     </div>
             </div>
