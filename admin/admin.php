@@ -214,8 +214,8 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        for($i = 0; $i < count($o_nameapp); $i++){
-                                            echo "<tr><td><a class = 'no-dec' href='forms?id=$idapp[$i]'>$o_nameapp[$i]</a></td><td><a class = 'no-dec' href='forms?id=$idapp[$i]'>$dateapp[$i]</a></td></tr>";
+                                        for($i = 0; $i < count($o_nameacc); $i++){
+                                            echo "<tr><td><a class = 'no-dec' href='forms?id=$idacc[$i]'>$o_nameacc[$i]</a></td><td><a class = 'no-dec' href='forms?id=$idacc[$i]'>$dateacc[$i]</a></td></tr>";
                                         }
                                     ?>
                                 </tbody>
