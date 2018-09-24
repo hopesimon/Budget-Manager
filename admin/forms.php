@@ -197,7 +197,7 @@ elseif(isset($_POST['deny'])){
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a href="../logout">
-                        <i class="fa fa-user fa-fw"></i>
+                        <i class="fa fa-sign-out fa-fw"></i>
                     </a>
                     <!-- /.dropdown-user -->
                 </li>
@@ -208,10 +208,10 @@ elseif(isset($_POST['deny'])){
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="admin">Admin Home Page</a>
+                            <a href="admin"><i class="fa fa-dashboard fa-fw"></i> Admin Home Page</a>
                         </li>
                         <li>
-                            <a href="../logout">Log out</a>
+                            <a href="../logout"><i class="fa fa-sign-out fa-fw"></i> Log out</a>
                         </li>
                     </ul>
                 </div>
