@@ -182,8 +182,10 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        for($i = 0; $i < count($o_nameip); $i++){
-                                            echo "<tr><td><a class = 'no-dec' href='forms?id=$idip[$i]'>$o_nameip[$i]</a></td><td><a class = 'no-dec' href='forms?id=$idip[$i]'>$dateip[$i]</a></td></tr>";
+                                        if(isset($o_nameip)){
+                                            for($i = 0; $i < count($o_nameip); $i++){
+                                                echo "<tr><td><a class = 'no-dec' href='forms?id=$idip[$i]'>$o_nameip[$i]</a></td><td><a class = 'no-dec' href='forms?id=$idip[$i]'>$dateip[$i]</a></td></tr>";
+                                            }
                                         }
                                     ?>
                                 </tbody>
@@ -214,8 +216,10 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        for($i = 0; $i < count($o_nameacc); $i++){
-                                            echo "<tr><td><a class = 'no-dec' href='forms?id=$idacc[$i]'>$o_nameacc[$i]</a></td><td><a class = 'no-dec' href='forms?id=$idacc[$i]'>$dateacc[$i]</a></td></tr>";
+                                        if(isset($o_nameacc)){
+                                            for($i = 0; $i < count($o_nameacc); $i++){
+                                                echo "<tr><td><a class = 'no-dec' href='forms?id=$idacc[$i]'>$o_nameacc[$i]</a></td><td><a class = 'no-dec' href='forms?id=$idacc[$i]'>$dateacc[$i]</a></td></tr>";
+                                            }
                                         }
                                     ?>
                                 </tbody>
@@ -243,8 +247,10 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        for($i = 0; $i < count($o_nameden); $i++){
-                                            echo "<tr><td><a class = 'no-dec' href='forms?id=$idden[$i]'>$o_nameden[$i]</a></td><td><a class = 'no-dec' href='forms?id=$idip[$i]'>$dateden[$i]</a></td></tr>";
+                                        if(isset($o_nameden)){
+                                            for($i = 0; $i < count($o_nameden); $i++){
+                                                echo "<tr><td><a class = 'no-dec' href='forms?id=$idden[$i]'>$o_nameden[$i]</a></td><td><a class = 'no-dec' href='forms?id=$idip[$i]'>$dateden[$i]</a></td></tr>";
+                                            }
                                         }
                                     ?>
                                 </tbody>
