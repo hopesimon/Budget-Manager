@@ -46,13 +46,9 @@ elseif(isset($_POST['deny'])){
         $success = "<div class='row' style='padding:30px;'><div class='alert alert-danger' role='alert'>Form failed to update.</div></div></div>";
     }
 }
-    // Get id number from URL which is /form?id=#### or /form?id=####.php
+    // Get id number from URL which is /forms?id=#### or /forms.php?id=####
     $id = $db->real_escape_string($_GET['id']);
-    $substring = substr($id, -4);
     $valid = true;
-    if($substring == '.php'){
-        $id = substr($id, 0, -4);
-    }
     if($id == ""){
         $valid = false;
     }
