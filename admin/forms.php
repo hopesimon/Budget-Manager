@@ -117,6 +117,9 @@ elseif(isset($_POST['deny'])){
             $other_amount[$index_other] = $row4['amount'];
             $index_other = $index_other + 1;
         }
+        
+        $real_expense = $expense - $tout;
+        $real_expense = round($real_expense, 2, PHP_ROUND_HALF_UP);
     }
 ?>
 <!DOCTYPE html>
@@ -309,7 +312,7 @@ elseif(isset($_POST['deny'])){
                                     <tfoot>
                                         <tr>
                                             <td></td>
-                                            <td id=\"expensetotal\">$$expense</td>
+                                            <td id=\"expensetotal\">$$real_expense</td>
                                         </tr>
                                     </tfoot>
                                 </table>
