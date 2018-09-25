@@ -33,10 +33,10 @@ CREATE TABLE `orgcurrent` (
   `name` varchar(30) NOT NULL,
   `membercnt` int(11) DEFAULT NULL,
   `manager_id` int(11) DEFAULT NULL,
-  `totalin` int(11) DEFAULT NULL,
-  `totalexpense` int(11) DEFAULT NULL,
-  `overhead` int(11) DEFAULT NULL,
-  `totalbudget` int(11) DEFAULT NULL
+  `totalin` double DEFAULT NULL,
+  `totalexpense` double DEFAULT NULL,
+  `overhead` double DEFAULT NULL,
+  `totalbudget` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -62,10 +62,10 @@ CREATE TABLE `orgpast` (
   `name` varchar(30) NOT NULL,
   `membercnt` int(11) DEFAULT NULL,
   `manager_id` int(11) DEFAULT NULL,
-  `totalin` int(11) DEFAULT NULL,
-  `totalexpense` int(11) DEFAULT NULL,
-  `overhead` int(11) DEFAULT NULL,
-  `totalbudget` int(11) DEFAULT NULL
+  `totalin` double DEFAULT NULL,
+  `totalexpense` double DEFAULT NULL,
+  `overhead` double DEFAULT NULL,
+  `totalbudget` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -99,14 +99,14 @@ INSERT INTO `otherexpenses` (`id`, `o_name`, `form_id`, `name`, `amount`) VALUES
 CREATE TABLE `requests` (
   `id` int(11) NOT NULL,
   `o_name` varchar(30) NOT NULL,
-  `tintotal` int(11) NOT NULL DEFAULT '0',
-  `other_amount` int(11) NOT NULL DEFAULT '0',
-  `equipment_amount` int(11) NOT NULL DEFAULT '0',
-  `improvements_amount` int(11) NOT NULL DEFAULT '0',
-  `contingencies_amount` int(11) NOT NULL DEFAULT '0',
-  `expensetotal` int(11) NOT NULL DEFAULT '0',
-  `touttotal` int(11) NOT NULL DEFAULT '0',
-  `net_inoutflow` int(11) NOT NULL DEFAULT '0',
+  `tintotal` double NOT NULL DEFAULT '0',
+  `other_amount` double NOT NULL DEFAULT '0',
+  `equipment_amount` double NOT NULL DEFAULT '0',
+  `improvements_amount` double NOT NULL DEFAULT '0',
+  `contingencies_amount` double NOT NULL DEFAULT '0',
+  `expensetotal` double NOT NULL DEFAULT '0',
+  `touttotal` double NOT NULL DEFAULT '0',
+  `net_inoutflow` double NOT NULL DEFAULT '0',
   `tin_description` varchar(140) DEFAULT NULL,
   `tout_description` varchar(140) DEFAULT NULL,
   `other_description` varchar(140) DEFAULT NULL,
@@ -137,7 +137,7 @@ CREATE TABLE `transfersin` (
   `o_name` varchar(30) NOT NULL,
   `form_id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `amount` int(11) NOT NULL DEFAULT '0'
+  `amount` double NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -159,7 +159,7 @@ CREATE TABLE `transfersout` (
   `o_name` varchar(30) NOT NULL,
   `form_id` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `amount` int(11) NOT NULL DEFAULT '0'
+  `amount` double NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
