@@ -54,6 +54,7 @@
     <title>ASAB Office</title>
     <!-- Script -->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="js/addAnother.js"></script>
     <script src="js/textcount.js"></script>
     <script src="js/totals.js"></script>
