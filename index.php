@@ -23,8 +23,8 @@ session_start();
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="ASAB Budget Management Office. Login to view your previous budget applications or create a new one.">
+    <meta name="author" content="Hope Simon">
 
     <title>ASAB Office</title>
     <!-- Script -->

@@ -137,8 +137,8 @@ elseif(isset($_POST['deny'])){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Reserve request form information, comments, and status for <?php echo "$name" ?>.">
+    <meta name="author" content="Hope Simon">
 
     <title>Reserve Request - <?php echo"$name" ?></title>
 
@@ -196,28 +196,24 @@ elseif(isset($_POST['deny'])){
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">ASAB Manager</a>
+                <a class="navbar-brand" href="index.html">ASAB Admin</a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                <li class="dropdown">
-                    <a href="../logout">
-                        <i class="fa fa-sign-out fa-fw"></i>
-                    </a>
-                    <!-- /.dropdown-user -->
+                <li>
+                    <a href="../logout"><i class="fa fa-sign-out fa-fw"></i></a>
                 </li>
-                <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="admin"><i class="fa fa-dashboard fa-fw"></i> Admin Home Page</a>
+                            <a href="/"><i class="fa fa-dashboard fa-fw"></i> Admin Home</a>
                         </li>
                         <li>
-                            <a href="../logout"><i class="fa fa-sign-out fa-fw"></i> Log out</a>
+                            <a href="../logout"><i class="fa fa-sign-out fa-fw"></i> Sign out</a>
                         </li>
                     </ul>
                 </div>
