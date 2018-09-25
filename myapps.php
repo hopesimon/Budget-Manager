@@ -96,22 +96,24 @@
         <div class="container">
             <a class="navbar-brand" href="reserve.php">Budget Request Form</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon"></span>
             </button>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="reserve">Submit form
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="myapps">My apps
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="logout">Sign out
-                    </a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="reserve">Submit form
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="myapps">My apps
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout">Sign out
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
