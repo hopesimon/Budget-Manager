@@ -71,13 +71,20 @@ elseif(isset($_POST['deny'])){
             $tout = $row['touttotal'];
             $net = $row['net_inoutflow'];
             $tin_desc = $row['tin_description'];
+            $tin_desc = preg_replace('~\\\*~', '', $tin_desc);
             $tout_desc = $row['tout_description'];
+            $tout_desc = preg_replace('~\\\*~', '', $tout_desc);
             $other_desc = $row['other_description'];
+            $other_desc = preg_replace('~\\\*~', '', $other_desc);
             $equip_desc = $row['eq_description'];
+            $equip_desc = preg_replace('~\\\*~', '', $equip_desc);
             $improv_desc = $row['im_description'];
+            $improv_desc = preg_replace('~\\\*~', '', $improv_desc);
             $cont_desc = $row['co_description'];
+            $cont_desc = preg_replace('~\\\*~', '', $cont_desc);
             $date = $row['datesubmitted'];
             $appcomments = $row['comments'];
+            $appcomments = preg_replace('~\\\*~', '', $appcomments);
             $thisreviewer = $row['reviewer'];
         }
         
