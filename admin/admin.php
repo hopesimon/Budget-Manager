@@ -34,10 +34,12 @@
 
     if (!$result2) die($db->error);
     $indexacc = 0;
+    $totalbudget = 0;
     while($row = $result2->fetch_assoc()){
         $o_nameacc[$indexacc] = $row['o_name'];
         $dateacc[$indexacc] = $row['datesubmitted'];
         $idacc[$indexacc] = $row['id'];
+        $totalbudget = $totalbudget + $row['net_inoutflow'];
         $indexacc = $indexacc + 1;
     }
 
@@ -262,6 +264,18 @@
                     <!-- /.panel -->
                 </div>
                 <!-- /.col-lg-12 -->
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Net In/Out
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <h2>$<?php echo "$totalbudget"; ?></h2>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                </div>
             </div>
             <!-- /.row -->
         </div>
