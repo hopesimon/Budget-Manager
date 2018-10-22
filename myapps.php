@@ -173,8 +173,9 @@
                                             else {
                                                 echo "<td>No comments</td>";
                                             }
-                                            echo "</tbody></table>";
+                                            echo "</tr>";
                                         }
+                                    echo "</tbody></table>";
                                 }
                                 else {
                                     echo "<h3> You have no pending apps.</h3>";
