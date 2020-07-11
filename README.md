@@ -4,6 +4,14 @@ The ASAB Budget Manager prototype is a project that allows for organizations' ma
 
 Specific apps are viewed via URL parsing.
 
+## Note
+
+This project was written while I was still a college student with no real world experience. Although I knew what object-oriented programming, design patterns, web development, etc. were, I did not understand how they worked. I cannot confidently say that this project is functional, and I'm definitely not proud of it *today* (although, at the time it was written, I was happy that I completed the entire project solo with limited knowledge of the languages it used).
+
+To put my past skill-level into perspective, I didn't even know what `.gitignore` was when I published this repository.
+
+The [python version](https://github.com/hopesimon/Python-Budget-Manager) of this project is much better, but still leaves a lot to be desired. Not only is there less functionality, but it was also written while I was still a student without any true experience.
+
 ## Example Project
 
 This project is hosted on FAU's LAMP servers in order to serve as a fully-functional example of the project.
